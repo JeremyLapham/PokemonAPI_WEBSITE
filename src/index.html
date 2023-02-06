@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/src/assets/FilledPokeball-removebg-preview.png">
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="pokeFont BG" >
+
+    <h1 id="pokeAPI" class="font-bold pokeText " >PokeAPI</h1>
+
+    <button id="openBtn" class="openBtn ">Open</button>
+
+    <div id="page" class="hide">
+        <div class="favsBG">
+            <h1 class="favTxt ">Favorites
+                <button id="favBtn" class="favPokeBall"></button>
+            </h1>
+            <h1 id="FAVTXT" class="favTXT"></h1>
+            <h1 id="DISPLAYID" class="displayID">Id:</h1>
+        </div>
+        <div>
+            <div id="pokeNorm" class="pokemonNorm">
+            </div>
+            <div id="pokeShin" class="pokemonShin">
+            </div>
+        </div>
+        <div>
+            <input type="text" class="form inputBox" placeholder="Search by pokemon name or id number"
+                aria-label="Pokemon" aria-describedby="basic-addon1" id="pokemon">
+        </div>
+
+
+        <div class="infoBG">
+            <button id="rndBtn" class="rndBtn">Generate random Pokemon between Gens 1-5</button>
+            <h1 id="name" class="pokeName"></h1>
+            <h1 class="found">Found in</h1>
+            <h1 id="location" class="location"></h1>
+
+            <div>
+                <div class="movesDrop">
+                    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+                        class="text-white movesBtnStyle focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
+                        type="button">Moves <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg></button>
+                    <div id="dropdown" style="width:300px;"
+                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultButton">
+                            <li>
+                                <p id="moves" class="moveDropTxt block px-4 py-2 "></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="ablilitiesDrop">
+                    <button id="dropdownDefaultButton2" data-dropdown-toggle="dropdown2"
+                        class="text-white movesBtnStyle focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
+                        type="button">Abilities <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg></button>
+                    <div id="dropdown2" style="width:300px;"
+                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultButton">
+                            <li>
+                                <p id="ablities" class="moveDropTxt block px-4 py-2"></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="evoOne" class="evoOne"></div>
+
+
+
+            <div id="typeByselfBG" class="hide text-center">
+                <h1 id="typeByselfTxt" class=" typeTxt"></h1>
+            </div>
+
+            <div id="typeBG1" class=" hide text-center">
+                <h1 id="type1" class=" typeTxt"></h1>
+            </div>
+
+            <div id="typeBG2" class=" hide text-center">
+                <h1 id="type2" class=" typeTxt"></h1>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="./app.js" type="module"></script>
+    <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
+</body>
+
+</html>

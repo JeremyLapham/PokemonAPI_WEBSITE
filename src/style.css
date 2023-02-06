@@ -1,0 +1,892 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: pokemon;
+    src: url(./assets/Pokemon.ttf);
+}
+
+.pokeText {
+    font-size:200px;
+    text-align: center;
+}
+
+.BG {
+    background-image: url("/src/assets/PokeAPIBG.jpg");
+    background-size: 80%;
+}
+
+.pokeFont {
+    font-family: pokemon;
+}
+
+.openBtn {
+    background-color: rgba(255, 255, 255, 0.75);
+    font-size: 100px;
+    margin: 5rem 0px 0px 27rem;
+    width: 635px;
+    border-radius: 154px;
+    vertical-align: middle;
+}
+
+.infoBG {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 576px;
+    height: 600px;
+    margin: 124px 0px 2rem 720px;
+}
+
+.favsBG {
+    position: absolute;
+    width: 576px;
+    height: 295px;
+    left: 71px;
+    top: 73px;
+    background: rgba(255, 255, 255, 0.6);
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.favTxt {
+    position: absolute;
+    width: 577px;
+    height: 73px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0px 0px 10px 10px;
+    font-size: 45px;
+    padding-left: 8rem;
+}
+
+.favTXT {
+    margin: 5rem 0px 0px 1rem;
+}
+
+.faveNoFill {
+    background-image: url(./assets/pokeBallNofill-removebg-preview.png);
+    background-size: 100%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    padding-bottom: 3rem;
+    border: 2px solid;
+}
+
+.faveNoFill:hover {
+    background-image: url(./assets/pokeBallNofill-removebg-preview.png);
+    background-size: 100%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    padding-bottom: 3rem;
+    border: 0px;
+}
+
+.favPokeBall {
+    background-image: url(./assets/FilledPokeball-removebg-preview.png);
+    background-size: 100%;
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    left: 340px;
+    top: 0px;
+    border: 2px solid;
+    background-repeat: no-repeat;
+}
+
+.favPokeBall:hover {
+    background-image: url(./assets/FilledPokeball-removebg-preview.png);
+    background-size: 100%;
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    left: 340px;
+    top: 0px;
+    border: 0px;
+    background-repeat: no-repeat;
+}
+
+.inputBox {
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding-left: 16px;
+    position: absolute;
+    width: 576px;
+    height: 48px;
+    left: 720px;
+    top: 73px;
+    border: 2px solid;
+}
+
+.displayID {
+    position: absolute;
+    top: 12px;
+    left: 440px;
+    font-size: 30px;
+    width: 135px;
+    letter-spacing: 1px;
+}
+
+.pokemonNorm {
+    width: 300px;
+    height: 200px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 114px;
+    top: 400px;
+}
+
+.pokemonShin {
+    width: 300px;
+    height: 200px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 359px;
+    top: 400px;
+}
+
+.rndBtn {
+    position: absolute;
+    width: 521px;
+    height: 48px;
+    left: 748px;
+    top: 142px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 11px;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    color: white;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+.pokeName {
+    position: absolute;
+    width: 576px;
+    height: 119px;
+    margin-left: 1rem;
+    top: 230px;
+    font-size: 60px;
+    line-height: 60px;
+}
+
+.found {
+    position: absolute;
+    width: 165px;
+    height: 59px;
+    left: 746px;
+    top: 363px;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 24px;
+}
+
+.location {
+    position: absolute;
+    width: 540px;
+    height: 64px;
+    left: 739px;
+    top: 422px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 24px;
+    letter-spacing: 2px;
+}
+
+.movesDrop {
+    position: absolute;
+    width: 266px;
+    height: 47px;
+    left: 734.5px;
+    top: 486px;
+    letter-spacing: 2px;
+}
+
+.movesBtnStyle {
+    background-color: #2d383f;
+    width: 266px;
+    height: 47px;
+    padding-left: 5rem;
+    border-radius: 0px;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.moveDropTxt {
+    overflow: scroll;
+    height: 150px;
+    overflow-x: hidden;
+}
+
+.ablilitiesDrop {
+    position: absolute;
+    width: 266px;
+    height: 47px;
+    left: 1016px;
+    top: 486px;
+    letter-spacing: 2px;
+}
+
+.evoOne {
+    position: absolute;
+    width: 500px;
+    height: 96px;
+    left: 765px;
+    top: 542px;
+    display: flex;
+    flex-direction: row;
+}
+
+.typeTxt {
+    position: absolute;
+    width: 178px;
+    height: 29px;
+    font-size: 40px;
+    line-height: 24px;
+    color: #000000;
+}
+
+#typeByselfTxt {
+    left: 920px;
+    top: 686px;
+}
+#type1 {
+    left: 824px;
+    top: 686px;
+}
+#type2 {
+    left: 1022px;
+    top: 686px;
+}
+
+.grassType {
+    background-color: #18ab00;
+    width: 178px;
+    height: 29px;
+    position: absolute;
+    font-size:20px;
+}
+
+.poisonType {
+    background-color: #db00ff;
+    width: 178px;
+    height: 29px;
+    position: absolute;
+    font-size:20px;
+}
+
+.normalType {
+    background-color: #858585;
+    width: 178px;
+    height: 29px;
+    position: absolute;
+    font-size:20px;
+}
+
+.fireType {
+    background-color: #bd2d00;
+    width: 178px;
+    height: 29px;
+    position: absolute;
+    font-size:20px;
+}
+
+.waterType {
+    background-color: #0038ff;
+    width: 178px;
+    height: 29px;
+    position: absolute;
+    font-size:20px;
+}
+
+.electicType {
+    background-color: #dce000;
+    width: 178px;
+    height: 29px;
+    position: absolute;
+    font-size:20px;
+}
+
+.fightingType {
+    background-color: #b86300;
+    width: 178px;
+    height: 29px;
+    position: absolute;
+    font-size:20px;
+}
+
+.iceType {
+    background-color: #00bfcb;
+    width: 178px;
+    height: 29px;
+    position: absolute;
+    font-size:20px;
+}
+
+.groundType {
+    background-color: #b39600;
+    width: 178px;
+    height: 29px;
+    position: absolute;
+    font-size:20px;
+}
+
+.flyingType {
+    background-color: #abf0e0;
+    width: 178px;
+    height: 29px;
+    position: absolute;
+    font-size:20px;
+}
+
+.psychicType {
+    background-color: #e500ce;
+    width: 178px;
+    height: 29px;
+    position: absolute;
+    font-size:20px;
+}
+
+.bugType {
+    background-color: #a2ee00;
+    width: 178px;
+    height: 29px;
+    position: absolute;
+    font-size:20px;
+}
+
+.darkType {
+    background-color: #5b2100;
+    width: 178px;
+    height: 29px;
+    position: absolute;
+    font-size:20px;
+}
+
+.dragonType {
+    background-color: #00a0d3;
+    width: 178px;
+    height: 29px;
+    position: absolute;
+    font-size:20px;
+}
+
+.ghostType {
+    background-color: #005cb1;
+    width: 178px;
+    height: 29px;
+    position: absolute;
+    font-size:20px;
+}
+
+.rockType {
+    background-color: #7b6000;
+    width: 178px;
+    height: 29px;
+    position: absolute;
+    font-size:20px;
+}
+
+.stealType {
+    background-color: #3c3c3c;
+    width: 178px;
+    height: 29px;
+    position: absolute;
+    font-size:20px;
+}
+
+.fairyType {
+    background-color: #ff00c7;
+    width: 178px;
+    height: 29px;
+    position: absolute;
+    font-size:20px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #9d9d9d;
+    border-radius: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb:hover {
+    background: #9c9c9c;
+}
+
+.saveTXT {
+    font-size: 10px;
+    position: absolute;
+    margin: -35px 0 0 5px;
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (max-width: 769px) and (min-width: 426px) {
+    .pokeText{
+        margin: 0 0 0 2px;
+    }
+
+    .BG {
+        background-image: url(/src/assets/PokeAPIBGTab.jpg);
+        background-size: 250%;
+        background-position-y: -10rem;
+    }
+
+    .openBtn {
+        background-color: rgba(255, 255, 255, 0.75);
+        font-size: 100px;
+        margin: 5rem 0rem 20rem 3.5rem;
+        width: 635px;
+        border-radius: 154px;
+    }
+
+    .favsBG {
+        position: absolute;
+        width: 650px;
+        height: 295px;
+        left: 60px;
+        top: 73px;
+        background: rgba(255, 255, 255, 0.6);
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+
+    .favTxt {
+        position: absolute;
+        width: 650px;
+        height: 73px;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 0px 0px 10px 10px;
+        font-size: 45px;
+        padding-left: 1rem;
+    }
+    
+    .favTXT {
+        margin: 5rem 0px 0px 12px;
+    }
+
+    .favPokeBall {
+        background-image: url(./assets/FilledPokeball-removebg-preview.png);
+        background-size: 100%;
+        position: absolute;
+        width: 65px;
+        height: 65px;
+        left: 240px;
+        top: 0px;
+        border: 2px solid;
+        background-repeat: no-repeat;
+    }
+    
+    .favPokeBall:hover {
+        background-image: url(./assets/FilledPokeball-removebg-preview.png);
+        background-size: 100%;
+        position: absolute;
+        width: 65px;
+        height: 65px;
+        left: 240px;
+        top: 0px;
+        border: 0px;
+        background-repeat: no-repeat;
+    }
+    
+    .displayID {
+        position: absolute;
+        top: 12px;
+        left: 400px;
+        font-size: 30px;
+        width: 135px;
+        letter-spacing: 1px;
+    }
+    
+    .pokemonNorm {
+        width: 150px;
+        height: 200px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 300px;
+        top: 610px;
+    }
+    
+    .pokemonShin {
+        width: 150px;
+        height: 200px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 500px;
+        top: 610px;
+    }
+    .inputBox {
+        width: 650px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        padding-left: 16px;
+        position: absolute;
+        width: 650px;
+        height: 48px;
+        left: 60px;
+        top: 400px;
+        border: 2px solid;
+    }
+    .infoBG {
+        background-color: rgba(255, 255, 255, 0.6);
+        width: 650px;
+        height: 750px;
+        margin: 448px 0px 2rem 60px;
+    }
+    .rndBtn {
+        position: absolute;
+        width: 600px;
+        height: 48px;
+        left: 85px;
+        top: 460px;
+        background: rgba(0, 0, 0, 0.75);
+        border-radius: 11px;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        color: white;
+        letter-spacing: 1px;
+        z-index: 1;
+    }
+    
+    .pokeName {
+        position: absolute;
+        width: 600px;
+        height: 119px;
+        margin-left: 2rem;
+        top: 530px;
+        font-size: 55px;
+    }
+    
+    .found {
+        position: absolute;
+        width: 165px;
+        height: 59px;
+        left: 80px;
+        top: 700px;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 24px;
+    }
+    
+    .location {
+        position: absolute;
+        width: 540px;
+        height: 64px;
+        left: 80px;
+        top: 750px;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 24px;
+        letter-spacing: 2px;
+    }
+    
+    .movesDrop {
+        position: absolute;
+        width: 266px;
+        height: 47px;
+        left: 80px;
+        top: 820px;
+        letter-spacing: 2px;
+    }
+    
+    .movesBtnStyle {
+        background-color: #2d383f;
+        width: 266px;
+        height: 47px;
+        padding-left: 5rem;
+        border-radius: 0px;
+        font-size: 30px;
+    }
+    
+    .moveDropTxt {
+        overflow: scroll;
+        height: 200px;
+        overflow-x: hidden;
+    }
+    
+    .ablilitiesDrop {
+        position: absolute;
+        width: 266px;
+        height: 47px;
+        left: 420px;
+        top: 820px;
+        letter-spacing: 2px;
+    }
+    
+    .evoOne {
+        position: absolute;
+        width: 550px;
+        height: 96px;
+        left: 100px;
+        top: 950px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .typeTxt {
+        position: absolute;
+        width: 178px;
+        height: 29px;
+        font-size: 40px;
+        line-height: 24px;
+        color: #000000;
+    }
+    
+    #typeByselfTxt {
+        left: 290px;
+        top: 1100px;
+    }
+    
+    #type1 {
+        left: 170px;
+        top: 1100px;
+    }
+    
+    #type2 {
+        left: 420px;
+        top: 1100px;
+    }
+}
+
+@media screen and (max-width: 426px) and (min-width: 320px) {
+    .pokeText{
+        margin: 0 0rem 0 0rem;
+        font-size: 100px;
+    }
+
+    .BG {
+        background-image: url(/src/assets/PokeAPIBGMOB.jpg);
+        background-size: 320%;
+        background-position-y: -20rem;
+    }
+
+    .openBtn {
+        background-color: rgba(255, 255, 255, 0.75);
+        font-size: 50px;
+        margin: 5rem 0rem 20rem 4rem;
+        width: 300px;
+        border-radius: 154px;
+    }
+
+    .favsBG {
+        position: absolute;
+        width: 425px;
+        height: 295px;
+        left: 0px;
+        top: 73px;
+        background: rgba(255, 255, 255, 0.6);
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+
+    .favTxt {
+        position: absolute;
+        width: 425px;
+        height: 73px;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 0px 0px 10px 10px;
+        font-size: 45px;
+        padding-left: 1rem;
+    }
+    
+    .favTXT {
+        margin: 5rem 0px 0px 12px;
+    }
+
+    .favPokeBall {
+        background-image: url(./assets/FilledPokeball-removebg-preview.png);
+        background-size: 100%;
+        position: absolute;
+        width: 65px;
+        height: 65px;
+        left: 230px;
+        top: 0px;
+        border: 2px solid;
+        background-repeat: no-repeat;
+    }
+    .favPokeBall:hover {
+        background-image: url(./assets/FilledPokeball-removebg-preview.png);
+        background-size: 100%;
+        position: absolute;
+        width: 65px;
+        height: 65px;
+        left: 230px;
+        top: 0px;
+        border: 0px;
+        background-repeat: no-repeat;
+    }
+    
+    .displayID {
+        position: absolute;
+        top: 12px;
+        left: 300px;
+        font-size: 30px;
+        width: 120px;
+        letter-spacing: 1px;
+    }
+    
+    .pokemonNorm {
+        width: 100px;
+        height: 200px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 160px;
+        top: 620px;
+    }
+    
+    .pokemonShin {
+        width: 100px;
+        height: 200px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 260px;
+        top: 620px;
+    }
+    .inputBox {
+        width: 425px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        padding-left: 16px;
+        position: absolute;
+        width: 425px;
+        height: 48px;
+        left: 0px;
+        top: 400px;
+        border: 2px solid;
+    }
+    .infoBG {
+        background-color: rgba(255, 255, 255, 0.6);
+        width: 425px;
+        height: 800px;
+        margin: 448px 0px 2rem 0px;
+    }
+    .rndBtn {
+        position: absolute;
+        width: 400px;
+        height: 48px;
+        left: 12px;
+        top: 460px;
+        background: rgba(0, 0, 0, 0.75);
+        border-radius: 11px;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        color: white;
+        letter-spacing: 1px;
+        z-index: 1;
+    }
+    
+    .pokeName {
+        position: absolute;
+        width: 409px;
+        height: 119px;
+        top: 560px;
+        font-size: 40px;
+    }
+    
+    .found {
+        position: absolute;
+        width: 165px;
+        height: 59px;
+        left: 25px;
+        top: 700px;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 24px;
+    }
+    
+    .location {
+        position: absolute;
+        width: 400px;
+        height: 64px;
+        left: 25px;
+        top: 750px;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 24px;
+        letter-spacing: 2px;
+    }
+    
+    .movesDrop {
+        position: absolute;
+        width: 266px;
+        height: 47px;
+        left: 63px;
+        top: 820px;
+        letter-spacing: 2px;
+    }
+    
+    .movesBtnStyle {
+        background-color: #2d383f;
+        width: 266px;
+        height: 47px;
+        padding-left: 5rem;
+        border-radius: 0px;
+        font-size: 30px;
+    }
+    
+    .moveDropTxt {
+        overflow: scroll;
+        height: 200px;
+        overflow-x: hidden;
+    }
+    
+    .ablilitiesDrop {
+        position: absolute;
+        width: 266px;
+        height: 47px;
+        left: 63px;
+        top: 880px;
+        letter-spacing: 2px;
+    }
+    
+    .evoOne {
+        position: absolute;
+        width: 425px;
+        height: 96px;
+        left: 3px;
+        top: 950px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .typeTxt {
+        position: absolute;
+        width: 178px;
+        height: 29px;
+        font-size: 40px;
+        line-height: 24px;
+        color: #000000;
+    }
+    
+    #typeByselfTxt {
+        left: 120px;
+        top: 1100px;
+    }
+    
+    #type1 {
+        left: 17px;
+        top: 1100px;
+    }
+    
+    #type2 {
+        left: 229px;
+        top: 1100px;
+    }
+
+}
